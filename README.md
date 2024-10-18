@@ -1,5 +1,15 @@
-A simple Python GUI program to extract the groundwater level data from https://indiawris.gov.in/wris/#/.
-1. Database.py
-Run this to create location_data.db, which contains the states, districts.
-2. gui.py
-A simple GUI from where one can select state -> district -> station, to obtain groundwater level data. The data can then be saved to a csv file, after which a graph will be displayed on the screen   
+
+# WRIS-DATA-Collect
+
+A simple Python GUI program to download the groundwater level data from  https://indiawris.gov.in/wris/#/.
+
+
+
+
+## database.py
+
+A Python script, which is used to create a Sqlite database. The database contains list of states and the districts in India.
+
+## gui.py
+
+A Python GUI, one can select the state, district, and the station name from the dropdown list. This data can be saved to .csv format. This will also display a graph of the data.
