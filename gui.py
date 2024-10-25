@@ -100,6 +100,7 @@ def display_graph():
     ax.plot(months, levels, marker='o', linestyle='-', color='b')
     
     # Rotating the x-axis labels for better readability
+    ax.set_xticks(range(len(months)))
     ax.set_xticklabels(months, rotation=45, ha='right')
     
     # Setting titles and labels
@@ -113,6 +114,7 @@ def display_graph():
     
     # Displaying the plot
     canvas.get_tk_widget().pack()
+    plt.close(fig) # Close the figure
 
 # Main window
 root = tk.Tk()
@@ -158,5 +160,5 @@ graph_button = ttk.Button(root, text="Show Graph", command=display_graph)
 graph_button.pack(pady=20)
 
 # Run the application
-root.geometry("300x350")
+root.geometry("300x400")
 root.mainloop()
