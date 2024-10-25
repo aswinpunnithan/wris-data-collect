@@ -86,11 +86,11 @@ def save_gwl():
         writer.writerows(gwl_data)
 
 def display_graph():
-    # Create a new window for the graph
+    # Creating a new window for the graph
     graph_window = tk.Toplevel(root)
     graph_window.title("Groundwater Level Graph")
 
-    # Create a new figure for the plot
+    # Creating a new figure for the plot
     fig, ax = plt.subplots(figsize=(6, 6))
 
     months = [item[0] for item in gwl_data]
@@ -99,7 +99,7 @@ def display_graph():
     # Plotting the data
     ax.plot(months, levels, marker='o', linestyle='-', color='b')
     
-    # Rotate the x-axis labels for better readability
+    # Rotating the x-axis labels for better readability
     ax.set_xticklabels(months, rotation=45, ha='right')
     
     # Setting titles and labels
@@ -111,7 +111,7 @@ def display_graph():
     canvas = FigureCanvasTkAgg(fig, master=graph_window)  # A tk.DrawingArea.
     canvas.draw()
     
-    # Display the plot
+    # Displaying the plot
     canvas.get_tk_widget().pack()
 
 # Main window
