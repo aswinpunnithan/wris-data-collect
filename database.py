@@ -8,7 +8,7 @@ import sqlite3
 conn = sqlite3.connect('location_data.db')
 cursor = conn.cursor()
 
-# Create a table for States
+# Creating a table for States
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS states (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS states (
 )
 ''')
 
-# Create a table for districts
+# Creating a table for districts
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS districts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -68,6 +68,6 @@ for state_code in state_codes:
     else:
         print("Failed to retrieve")
 
-# Comitt the changes and close the connection
+# Comitting the changes and closing the connection
 conn.commit()
 conn.close()
